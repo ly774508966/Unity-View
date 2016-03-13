@@ -61,6 +61,7 @@
     <Compile Include="Tools\UITools.cs" />
     <Compile Include="UIConstant.cs" />
     <Compile Include="UILayout.cs" />
+    <Compile Include="UIToast.cs" />
     <Compile Include="UIView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
