@@ -40,8 +40,11 @@ namespace UnityView
                 RectTransform.anchorMax = new Vector2(value.position.x + value.size.x, 1 - value.position.y);
                 RectTransform.offsetMin = Vector2.zero;
                 RectTransform.offsetMax = Vector2.zero;
-                Width = RectTransform.sizeDelta.x;
-                Height = RectTransform.sizeDelta.y;
+                RectTransform.localScale = Vector3.one;
+                Vector3[] vectors = new Vector3[4];
+                RectTransform.GetWorldCorners(vectors);
+                Width = vectors[2].x - vectors[1].x;
+                Height = vectors[1].y - vectors[0].y;
             }
         }
         // 边框布局
@@ -55,10 +58,30 @@ namespace UnityView
                 RectTransform.anchorMin = RectTransform.anchorMax = new Vector2(value.Origin.x, 1 - value.Origin.y);
                 RectTransform.sizeDelta = value.Size;
                 RectTransform.anchoredPosition = Vector2.zero;
-                //var offsetX = value.Origin.x + value.Size.x / 2f;
-                //var offsetY = rectTransform.sizeDelta.y - value.Size.y / 2f - value.Origin.y;
-                //GetRectTransform.anchorMin = new Vector2(offsetX / rectTransform.sizeDelta.x, offsetY / rectTransform.sizeDelta.y);
-                //GetRectTransform.anchorMax = GetRectTransform.anchorMin;
+                RectTransform.localScale = Vector3.one;
+            }
+        }
+
+        // 标准化矩形布局
+        public UIRect UIRect
+        {
+            set
+            {
+                RectTransform parent = RectTransform.parent.GetComponent<RectTransform>();
+                if (!parent) return;
+                Vector3[] vectors = new Vector3[4];
+                RectTransform.GetWorldCorners(vectors);
+                Vector2 parentSize = parent.sizeDelta;
+                Vector2 parentOrigin = parent.anchoredPosition;
+                Rect = new Rect(value.Left, value.Top, value.Width, value.Height);
+            }
+        }
+        // 标准化边框布局
+        public UIFrame UIFrame
+        {
+            set
+            {
+                Frame = new Frame(value.Origin, value.Size);
             }
         }
 
@@ -187,7 +210,7 @@ namespace UnityView
 
         public static void RectToCenterMargin(RectTransform rectTransform, float margin)
         {
-            
+
         }
 
         public static void FrameToCenterZoom(RectTransform rectTransform, float zoom)

@@ -1,5 +1,4 @@
-﻿using System.Security;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityView.Component;
 
@@ -7,17 +6,17 @@ namespace UnityView
 {
     public class TextView : UIView
     {
-        public readonly Text TextHolder;
+        public readonly Text TextComponent;
 
         public string Text
         {
             set
             {
-                TextHolder.text = value;
+                TextComponent.text = value;
             }
             get
             {
-                return TextHolder.text;
+                return TextComponent.text;
             }
         }
 
@@ -25,11 +24,11 @@ namespace UnityView
         {
             set
             {
-                TextHolder.font = value;
+                TextComponent.font = value;
             }
             get
             {
-                return TextHolder.font;
+                return TextComponent.font;
             }
         }
 
@@ -37,11 +36,11 @@ namespace UnityView
         {
             set
             {
-                TextHolder.fontSize = (int)(value * UIConstant.FontCoefficient);
+                TextComponent.fontSize = (int)(value * UIConstant.FontCoefficient);
             }
             get
             {
-                return TextHolder.fontSize;
+                return TextComponent.fontSize;
             }
         }
 
@@ -49,11 +48,11 @@ namespace UnityView
         {
             set
             {
-                TextHolder.alignment = value;
+                TextComponent.alignment = value;
             }
             get
             {
-                return TextHolder.alignment;
+                return TextComponent.alignment;
             }
         }
 
@@ -62,14 +61,14 @@ namespace UnityView
         public TextView(UILayout layout)
             : base(layout)
         {
-            TextHolder = UIObject.AddComponent<Text>();
+            TextComponent = UIObject.AddComponent<Text>();
             Font = UIViewManager.GetInstance().Font;
         }
 
         public TextView(GameObject gameObject)
             : base(gameObject)
         {
-            TextHolder = gameObject.GetComponent<Text>() ?? gameObject.AddComponent<Text>();
+            TextComponent = gameObject.GetComponent<Text>() ?? gameObject.AddComponent<Text>();
             Font = UIViewManager.GetInstance().Font;
         }
 

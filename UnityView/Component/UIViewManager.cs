@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 
 namespace UnityView.Component
 {
@@ -35,6 +36,43 @@ namespace UnityView.Component
         public static UIViewManager GetInstance()
         {
             return _instance ?? FindObjectOfType<UIViewManager>();
+        }
+
+        public static void Discard()
+        {
+            UICanvas.Discard();
+            _instance = null;
+        }
+
+        protected Queue<UIToast> ToastQueue = new Queue<UIToast>();
+        protected UIToast CurrentToast = null;
+        public void ShowToast(UIToast toast)
+        {
+            ToastQueue.Enqueue(toast);
+        }
+
+        public void Update()
+        {
+            if (CurrentToast == null)
+            {
+                if (ToastQueue.Count > 0)
+                {
+                    CurrentToast = ToastQueue.Dequeue();
+                    CurrentToast.UIObject.SetActive(true);
+                    CurrentToast.BackgroundColor = new Color(CurrentToast.BackgroundColor.r,
+                        CurrentToast.BackgroundColor.g, CurrentToast.BackgroundColor.b, 0);
+                    CurrentToast.TitleTextComponent.color = new Color(CurrentToast.TitleTextComponent.color.r,
+                        CurrentToast.TitleTextComponent.color.g, CurrentToast.TitleTextComponent.color.b, 0);
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+            {
+                if (CurrentToast.UpdateLifeTime(Time.deltaTime)) CurrentToast = null;
+            }
         }
     }
 }

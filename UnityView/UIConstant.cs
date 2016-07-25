@@ -41,6 +41,8 @@ namespace UnityView
 
         public static readonly Vector2 TopLeftVector2 = new Vector2(0, 1);
 
+        public const float AnimationDuration = 0.25f;
+
         public const int UILayer = 5;
 
         public static float AspectWidthToHeight(float aspect)
@@ -50,6 +52,16 @@ namespace UnityView
         public static float AspectHeightToWidth(float aspect)
         {
             return aspect * AspectRatio;
+        }
+
+        public static float LengthWidthToHeight(float length)
+        {
+            return length * AspectRatio;
+        }
+
+        public static float LengthHeightToWidth(float length)
+        {
+            return length * AntiAspectRatio;
         }
     }
 }

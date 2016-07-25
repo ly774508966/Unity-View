@@ -22,5 +22,10 @@ namespace UnityView.Component
             CanvasScaler = UIObject.GetComponent<CanvasScaler>() ?? UIObject.AddComponent<CanvasScaler>();
             GraphicRaycaster = UIObject.GetComponent<GraphicRaycaster>() ?? UIObject.AddComponent<GraphicRaycaster>();
         }
+
+        public static void Discard()
+        {
+            _instance = null;
+        }
     }
 }

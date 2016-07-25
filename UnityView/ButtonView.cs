@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityView.Component;
@@ -10,36 +9,56 @@ namespace UnityView
     {
         public readonly Button Button;
 
-        public Text TitleTextView;
+        private Text _titleTextComponent;
+        public Text TitleTextComponent
+        {
+            set
+            {
+                _titleTextComponent = value;
+            }
+            get
+            {
+                if (_titleTextComponent != null) return _titleTextComponent;
+                var text = TextView.BaseTextView();
+                _titleTextComponent = text.GetComponent<Text>();
+                text.transform.SetParent(RectTransform);
+                RectFill(text.GetComponent<RectTransform>());
+                return _titleTextComponent;
+            }
+        }
 
         public string Title
         {
             set
             {
-                if (TitleTextView == null)
-                {
-                    var text = TextView.BaseTextView();
-                    TitleTextView = text.GetComponent<Text>();
-                    text.transform.SetParent(RectTransform);
-                    RectFill(text.GetComponent<RectTransform>());
-                }
-                TitleTextView.text = value;
+                TitleTextComponent.text = value;
             }
             get
             {
-                return TitleTextView == null ? null : TitleTextView.text;
+                return TitleTextComponent.text;
             }
         }
 
+        public Color TitleColor
+        {
+            set
+            {
+                TitleTextComponent.color = value;
+            }
+            get
+            {
+                return TitleTextComponent.color;
+            }
+        }
         public float FontSize
         {
             set
             {
-                TitleTextView.fontSize = Mathf.RoundToInt((value * UIConstant.FontCoefficient));
+                TitleTextComponent.fontSize = Mathf.RoundToInt((value * UIConstant.FontCoefficient));
             }
             get
             {
-                return TitleTextView == null ? 0 : TitleTextView.fontSize / UIConstant.FontCoefficient;
+                return TitleTextComponent.fontSize / UIConstant.FontCoefficient;
             }
         }
 

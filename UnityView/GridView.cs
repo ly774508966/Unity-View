@@ -215,7 +215,7 @@ namespace UnityView
     //    public GridView(UILayout layout) : base(layout)
     //    {
     //        UIObject.name = "Grid View";
-    //        BackgroundImage = UIObject.AddComponent<Image>();
+    //        ImageComponent = UIObject.AddComponent<Image>();
     //        ScrollRect = UIObject.AddComponent<ScrollRect>();
     //        Mask = UIObject.AddComponent<Mask>();
     //        Mask.showMaskGraphic = false;

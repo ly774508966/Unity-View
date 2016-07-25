@@ -9,20 +9,20 @@ namespace UnityView
 
         public CanvasRenderer CanvasRenderer { get; set; }
 
-        protected Image BackgroundImage;
-        public Color BackgroundColor
+        protected Image ImageComponent;
+        public virtual Color BackgroundColor
         {
             set
             {
-                if (BackgroundImage == null)
+                if (ImageComponent == null)
                 {
-                    BackgroundImage = UIObject.AddComponent<Image>();
+                    ImageComponent = UIObject.AddComponent<Image>();
                 }
-                BackgroundImage.color = value;
+                ImageComponent.color = value;
             }
             get
             {
-                return BackgroundImage == null ? Color.clear : BackgroundImage.color;
+                return ImageComponent == null ? Color.clear : ImageComponent.color;
             }
         }
 
@@ -30,15 +30,15 @@ namespace UnityView
         {
             set
             {
-                if (BackgroundImage == null)
+                if (ImageComponent == null)
                 {
-                    BackgroundImage = UIObject.AddComponent<Image>();
+                    ImageComponent = UIObject.AddComponent<Image>();
                 }
-                BackgroundImage.sprite = value;
+                ImageComponent.sprite = value;
             }
             get
             {
-                return BackgroundImage.sprite;
+                return ImageComponent.sprite;
             }
         }
 

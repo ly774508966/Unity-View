@@ -44,11 +44,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseDialog.cs" />
     <Compile Include="BaseListView.cs" />
     <Compile Include="ButtonView.cs" />
     <Compile Include="Component\Cuboid.cs" />
     <Compile Include="Component\Frame.cs" />
     <Compile Include="Component\UICanvas.cs" />
+    <Compile Include="Component\UIFrame.cs" />
+    <Compile Include="Component\UIRect.cs" />
     <Compile Include="Component\UIViewManager.cs" />
     <Compile Include="Event\Event.cs" />
     <Compile Include="Event\UIEventHandler.cs" />
@@ -57,9 +60,11 @@
     <Compile Include="Adapter\Adapter.cs" />
     <Compile Include="ListView.cs" />
     <Compile Include="ScrollView.cs" />
+    <Compile Include="TextField.cs" />
     <Compile Include="TextView.cs" />
     <Compile Include="Tools\UITools.cs" />
     <Compile Include="UIConstant.cs" />
+    <Compile Include="UIDialog.cs" />
     <Compile Include="UILayout.cs" />
     <Compile Include="UIToast.cs" />
     <Compile Include="UIView.cs" />

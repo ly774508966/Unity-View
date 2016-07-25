@@ -56,7 +56,8 @@ namespace UnityView
 
         public Vector2 Spacing = Vector2.zero;
 
-        public bool MaskEnable = true;
+//        public bool MaskEnable = true;
+        public Mask Mask;
 
         protected ScrollRect ScrollRect;
         protected RectTransform ContentTransform;
@@ -115,12 +116,9 @@ namespace UnityView
 
             ScrollOrentation = ScrollOrentation.Vertical;
 
-            if (MaskEnable)
-            {
-                BackgroundColor = Color.white;
-                var mask = UIObject.AddComponent<Mask>();
-                mask.showMaskGraphic = false;
-            }
+            BackgroundColor = Color.black;
+            Mask = UIObject.AddComponent<Mask>();
+            Mask.showMaskGraphic = false;
         }
         private void OnValueChanged(Vector2 pos)
         {

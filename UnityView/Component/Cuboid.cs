@@ -75,13 +75,27 @@ namespace UnityView.Component
 
         public static bool Contains(Cuboid cuboid, Vector3 point)
         {
-            return point.x.Between(cuboid.OriginX, cuboid.OriginX + cuboid.Length) && point.y.Between(cuboid.OriginY, cuboid.OriginY + +cuboid.Height) && point.z.Between(cuboid.OriginZ, cuboid.OriginZ + cuboid.Width);
+            return point.x.Between(cuboid.OriginX, cuboid.OriginX + cuboid.Length) &&
+                   point.y.Between(cuboid.OriginY, cuboid.OriginY + +cuboid.Height) &&
+                   point.z.Between(cuboid.OriginZ, cuboid.OriginZ + cuboid.Width);
         }
 
         public override string ToString()
         {
             var builder = new StringBuilder("Cuboid:");
-            builder.Append("{ Origin:[ x:").Append(OriginX).Append(", y:").Append(OriginY).Append(", z:").Append(OriginZ).Append(" ], Length:").Append(Length).Append(", Width:").Append(Width).Append(" Height").Append(Height).Append(" }");
+            builder.Append("{ Origin:[ x:")
+                .Append(OriginX)
+                .Append(", y:")
+                .Append(OriginY)
+                .Append(", z:")
+                .Append(OriginZ)
+                .Append(" ], Length：")
+                .Append(Length)
+                .Append(", Width：")
+                .Append(Width)
+                .Append(" Height：")
+                .Append(Height)
+                .Append(" }");
             return builder.ToString();
         }
     }
