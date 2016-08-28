@@ -1,0 +1,16 @@
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\bin\Debug\UnityView.dll
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\bin\Debug\UnityView.pdb
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\bin\Debug\UnityEngine.dll
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\obj\Debug\UnityView.csprojResolveAssemblyReference.cache
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\obj\Debug\UnityView.dll
+c:\users\shadow_blade\documents\visual studio 2013\Projects\UnityView\UnityView\obj\Debug\UnityView.pdb
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\bin\Debug\UnityEngine.UI.dll
+G:\Visual Studio Project\UnityView\UnityView\bin\Debug\UnityView.dll
+G:\Visual Studio Project\UnityView\UnityView\bin\Debug\UnityView.pdb
+G:\Visual Studio Project\UnityView\UnityView\bin\Debug\UnityEngine.dll
+G:\Visual Studio Project\UnityView\UnityView\bin\Debug\UnityEngine.UI.dll
+G:\Visual Studio Project\UnityView\UnityView\obj\Debug\UnityView.csprojResolveAssemblyReference.cache
+G:\Visual Studio Project\UnityView\UnityView\obj\Debug\UnityView.dll
+G:\Visual Studio Project\UnityView\UnityView\obj\Debug\UnityView.pdb
+G:\Unity Project\UnityViewDemo\Assets\Plugins\UnityView.dll
+G:\Unity Project\UnityViewDemo\Assets\Plugins\UnityView.pdb

@@ -1,0 +1,16 @@
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\bin\Release\UnityView.dll
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\bin\Release\UnityView.pdb
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\bin\Release\UnityEngine.dll
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\bin\Release\UnityEngine.UI.dll
+G:\Unity3D project\CubeMagic\Assets\Plugins\UnityView.dll
+G:\Unity3D project\CubeMagic\Assets\Plugins\UnityView.pdb
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\obj\Release\UnityView.dll
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\obj\Release\UnityView.pdb
+C:\Users\shadow_blade\Documents\Visual Studio 2013\Projects\UnityView\UnityView\obj\Release\UnityView.csprojResolveAssemblyReference.cache
+G:\Visual Studio Project\UnityView\UnityView\obj\Release\UnityView.csprojResolveAssemblyReference.cache
+G:\Visual Studio Project\UnityView\UnityView\obj\Release\UnityView.dll
+G:\Visual Studio Project\UnityView\UnityView\obj\Release\UnityView.pdb
+G:\Unity Project\CubeMagic\Assets\Plugins\UnityView.dll
+G:\Unity Project\CubeMagic\Assets\Plugins\UnityView.pdb
+G:\Unity Project\UnityViewDemo\Assets\Plugins\UnityView.dll
+G:\Unity Project\UnityViewDemo\Assets\Plugins\UnityView.pdb

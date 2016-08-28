@@ -1,0 +1,13 @@
+G:\Visual Studio Project\UnityView\Test\bin\Debug\Test.exe.config
+G:\Visual Studio Project\UnityView\Test\bin\Debug\Test.exe
+G:\Visual Studio Project\UnityView\Test\bin\Debug\Test.pdb
+G:\Visual Studio Project\UnityView\Test\bin\Debug\UnityView.dll
+G:\Visual Studio Project\UnityView\Test\bin\Debug\UnityEngine.UI.dll
+G:\Visual Studio Project\UnityView\Test\bin\Debug\UnityEngine.dll
+G:\Visual Studio Project\UnityView\Test\bin\Debug\UnityView.pdb
+G:\Visual Studio Project\UnityView\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+G:\Visual Studio Project\UnityView\Test\obj\Debug\Test.exe
+G:\Visual Studio Project\UnityView\Test\obj\Debug\Test.pdb
+G:\Git\UnityView\UnityView\Test\bin\Debug\Test.exe.config
+G:\Git\UnityView\UnityView\Test\obj\Debug\Test.exe
+G:\Git\UnityView\UnityView\Test\obj\Debug\Test.pdb
